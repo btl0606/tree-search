@@ -1,0 +1,115 @@
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --highlight-bg: yellow;
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --highlight-light: #06cb27; 
+    --text-color: #333; /* Light Mode için */
+    --bg-color: #fff;  /* Light Mode için */
+  }
+  
+  [data-theme="dark"] {
+    --bg-color: #222;
+    --text-color: #f1f1f1;
+    --border-color: #444;
+    --highlight-bg: #ff57e3;
+    --button-bg: #0056b3;
+    --button-hover: #003c80;
+    
+  }
+  
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family:"Poppins",serif;
+    margin: 20px;
+  }
+  
+ 
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-container i {
+    position: absolute;
+    left: 10px;
+    color: var(--border-color);
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 10px 10px 35px; 
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+  
+
+  .tree-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-color);
+  }
+  
+  .tree-table th {
+    background: var(--button-bg);
+    color: white;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .tree-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+
+  .tree-table tr:hover {
+    background: rgba(0, 123, 255, 0.1);
+  }
+  
+
+  .toggle-button {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background: var(--button-hover);
+  }
+  
+
+
+
+.highlight {
+  background-color: var(--highlight-light);
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+  
+
+  @media (max-width: 768px) {
+    .tree-table th, .tree-table td {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .search-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
